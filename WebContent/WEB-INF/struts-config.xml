@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+          
+<struts-config>
+	<form-beans>
+		<form-bean name="registerForm" type="app.RegisterForm"></form-bean>
+	</form-beans>
+	
+	<action-mappings>
+	<action path="/register" type="app.RegisterAction" name="registerForm">
+		<forward name="Success" path="/Success.jsp"/>
+		<forward name="Failure" path="/Failure.jsp"/>
+		<forward name="logon" path="/Failure.jsp"/>
+		<forward name="logoff" path="/Failure.jsp"/>
+	</action>
+	</action-mappings>
+</struts-config>
